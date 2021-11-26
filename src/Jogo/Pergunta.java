@@ -1,0 +1,83 @@
+package Jogo;
+
+public class Pergunta {
+
+	private String enunciadoP;
+	private String alternativaA;
+	private String alternativaB;
+	private String alternativaC;
+	private String alternativaD;
+	private char alternativaCorreta;
+
+	public Pergunta() {
+		// TODO Auto-generated constructor stub
+	}
+
+	/* public void chamarAlternativa() {
+		System.out.println(this.alternativaA);
+		System.out.println(this.alternativaB);
+		System.out.println(this.alternativaC);
+		System.out.println(this.alternativaD);
+		System.out.println("qual sua resposta?");
+
+		char resposta;
+		//resposta = sc.next().charAt(0);
+
+		if (resposta == this.alternativaCorreta) {
+			System.out.println("voc� acertou");
+
+		} else {
+			System.out.println("voc� errou");
+
+		}
+	}*/
+
+	public String getEnunciadoP() {
+		return enunciadoP;
+	}
+
+	public void setEnunciadoP(String enunciadoP) {
+		this.enunciadoP = enunciadoP;
+	}
+
+	public char getAlternativaCorreta() {
+		return alternativaCorreta;
+	}
+
+	public void setAlternativaCorreta(char alternativaCorreta) {
+		this.alternativaCorreta = alternativaCorreta;
+	}
+
+	public String getAlternativaA() {
+		return alternativaA;
+	}
+
+	public void setAlternativaA(String alternativaA) {
+		this.alternativaA = alternativaA;
+	}
+
+	public String getAlternativaB() {
+		return alternativaB;
+	}
+
+	public void setAlternativaB(String alternativaB) {
+		this.alternativaB = alternativaB;
+	}
+
+	public String getAlternativaC() {
+		return alternativaC;
+	}
+
+	public void setAlternativaC(String alternativaC) {
+		this.alternativaC = alternativaC;
+	}
+
+	public String getAlternativaD() {
+		return alternativaD;
+	}
+
+	public void setAlternativaD(String alternativaD) {
+		this.alternativaD = alternativaD;
+	}
+
+}
