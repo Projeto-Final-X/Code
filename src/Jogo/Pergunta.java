@@ -12,25 +12,11 @@ public class Pergunta {
 	public Pergunta() {
 		// TODO Auto-generated constructor stub
 	}
-
-	/* public void chamarAlternativa() {
-		System.out.println(this.alternativaA);
-		System.out.println(this.alternativaB);
-		System.out.println(this.alternativaC);
-		System.out.println(this.alternativaD);
-		System.out.println("qual sua resposta?");
-
-		char resposta;
-		//resposta = sc.next().charAt(0);
-
-		if (resposta == this.alternativaCorreta) {
-			System.out.println("voc� acertou");
-
-		} else {
-			System.out.println("voc� errou");
-
-		}
-	}*/
+	
+	public void chamarPergunta() {
+		
+		
+	}
 
 	public String getEnunciadoP() {
 		return enunciadoP;

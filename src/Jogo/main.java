@@ -9,14 +9,30 @@ public class main {
 
 		Scanner sc = new Scanner(System.in);
 		// questao
-		Pergunta pergunta1 = new Pergunta();
-		pergunta1.setEnunciadoP("voc� tem 21 anos?");
-		pergunta1.setAlternativaA("A - Sim");
-		pergunta1.setAlternativaB("B - talvez");
-		pergunta1.setAlternativaC("C - n�o");
-		pergunta1.setAlternativaD("D - n�o sei");
+		
+		List<Pergunta> perguntas = new ArrayList<Pergunta>();
+		
+		Pergunta perg1 = new Pergunta();
+		perg1.setEnunciadoP("voce tem 21 anos?");
+		perg1.setAlternativaA("A - Sim");
+		perg1.setAlternativaB("B - talvez");
+		perg1.setAlternativaC("C - nao");
+		perg1.setAlternativaD("D - nao sei");
 
-		pergunta1.setAlternativaCorreta('b');
+		perg1.setAlternativaCorreta('b');
+		
+		Pergunta perg2 = new Pergunta();
+		perg2.setEnunciadoP("voce tem 22 anos?");
+		perg2.setAlternativaA("A - Sim");
+		perg2.setAlternativaB("B - talvez");
+		perg2.setAlternativaC("C - nao");
+		perg2.setAlternativaD("D - nao sei");
+
+		perg2.setAlternativaCorreta('c');
+		
+		perguntas.add(perg1);
+		perguntas.add(perg2);
+
 
 		// personagem
 		Personagem perso1 = new Personagem();
@@ -77,10 +93,18 @@ public class main {
 			switch (opcaoJogador) {
 				case 1:
 					Menu menu = new Menu();
+					
+					Partida novaPartida = new Partida();
 
 					List<Jogador> salvaJogadores = new ArrayList<Jogador>();
 					salvaJogadores = menu.chamarMenuEscolhaJogador();
 					menu.menuPersonagem(personagens, salvaJogadores);
+					
+					novaPartida.inicioPartida(salvaJogadores, perguntas);
+					
+					
+					
+					
 
 			}
 		}
