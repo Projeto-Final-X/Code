@@ -73,9 +73,9 @@ public class Menu {
 				String emailjogador3;
 
 				// Scanner proxima linha para nomejogador2
-				System.out.println("---------------------------------------------------");
-				System.out.println("CADASTRO DE JOGADOR 1");
-				System.out.println("---------------------------------------------------");
+				System.out.println("----------------------------------------------------------------");
+				System.out.println("---------------------CADASTRO DE JOGADOR 1----------------------");
+				System.out.println("----------------------------------------------------------------");
 				// colocar nome
 				System.out.printf("Jogador 1 coloque seu nome por favor: ");
 				nomejogador3 = sc.nextLine();
@@ -95,9 +95,9 @@ public class Menu {
 				emailjogador3 = sc.nextLine();
 				j3.setEmail(emailjogador3);
 
-				System.out.println("-------------------------------------------------------------------------");
+				System.out.println("----------------------------------------------------------------");
 				System.out.println("O jogador 1 com o nome de:" + j3.getNome() + " Foi cadastrado com sucesso!");
-				System.out.println("-------------------------------------------------------------------------");
+				System.out.println("----------------------------------------------------------------");
 
 				// Cria um objeto jogador na classe jogador
 				Jogador j2 = new Jogador();
@@ -108,12 +108,12 @@ public class Menu {
 				String telefonejogador2;
 				String emailjogador2;
 
-				System.out.println("---------------------------------------------------");
-				System.out.println("CADASTRO DE JOGADOR 2");
-				System.out.println("---------------------------------------------------");
+				System.out.println("----------------------------------------------------------------");
+				System.out.println("----------------------CADASTRO DE JOGADOR 2---------------------");
+				System.out.println("----------------------------------------------------------------");
 
 				// Scanner proxima linha para nomejogador2
-				System.out.printf("\n Jogador 2 coloque seu nome por favor:");
+				System.out.printf("\nJogador 2 coloque seu nome por favor:");
 				nomejogador2 = sc2.nextLine();
 				j2.setNome(nomejogador2);
 
@@ -130,11 +130,11 @@ public class Menu {
 				j2.setEmail(emailjogador2);
 
 				System.out.println("------------------------------------------------------------------------");
-				System.out.println("O jogador1 com o nome de:" + j2.getNome() + " Foi cadastrado com sucesso!");
+				System.out.println("O jogador 2 com o nome de:" + j2.getNome() + " Foi cadastrado com sucesso!");
 				System.out.println("------------------------------------------------------------------------");
 
-				jogadores.add(j2);
 				jogadores.add(j3);
+				jogadores.add(j2);
 
 				break;
 
@@ -148,19 +148,22 @@ public class Menu {
 
 	public void menuPersonagem(List<Personagem> personagens, List<Jogador> jogadores) {
 		Scanner sc3 = new Scanner(System.in);
+		
 		// decisao de quantidade de jogadores
 		if (jogadores.size() == 1) {
-
+			
 			// Colocar as descricoes de habilidade
-			System.out.println("------------------------------------------------------------------------");
-			System.out.println("Jogador 1 escolha seu personagem!");
-			System.out.println("------------------------------------------------------------------------");
+			System.out.println("----------------------------------------------------------------");
+			System.out.println("---------------Jogador 1 escolha seu personagem!----------------");
+			System.out.println("----------------------------------------------------------------");
 
 			// Aparecer personagens
 			for (int i = 0; i < personagens.size(); i++) {
-				System.out.print(i + 1 + "-" + personagens.get(i).getNomeP() + "\n");
+				System.out.print(i + 1 + "-" + personagens.get(i).getNomeP() + personagens.get(i).getHabilidadeP() +"\n");
+				System.out.println("----------------------------------------------------------------");
 
 			}
+			System.out.println("----------------------------------------------------------------");
 			System.out.print("Escolha:");
 
 			int opcaoPersonagem = sc3.nextInt();
@@ -168,38 +171,33 @@ public class Menu {
 			// escolher personagem
 			switch (opcaoPersonagem) {
 				case 1:
-					System.out
-							.print(jogadores.get(0).getApelido() + " Voce escolheu o personagem " + personagens.get(0).getNomeP());
+					System.out.printf(jogadores.get(0).getApelido() + " Voce escolheu o personagem " + personagens.get(0).getNomeP());
 					jogadores.get(0).setJogador1P(personagens.get(0));
 					personagens.remove(0);
 					break;
 				case 2:
-					System.out
-							.print(jogadores.get(0).getApelido() + " Voce escolheu o personagem " + personagens.get(1).getNomeP());
+					System.out.printf(jogadores.get(0).getApelido() + " Voce escolheu o personagem " + personagens.get(1).getNomeP());
 					jogadores.get(0).setJogador1P(personagens.get(1));
 					personagens.remove(1);
 					break;
 
 				case 3:
 
-					System.out
-							.print(jogadores.get(0).getApelido() + " Voce escolheu o personagem " + personagens.get(2).getNomeP());
+					System.out.printf(jogadores.get(0).getApelido() + " Voce escolheu o personagem " + personagens.get(2).getNomeP());
 					jogadores.get(0).setJogador1P(personagens.get(2));
 					personagens.remove(2);
 					break;
 
 				case 4:
 
-					System.out
-							.print(jogadores.get(0).getApelido() + " Voce escolheu o personagem " + personagens.get(3).getNomeP());
+					System.out.printf(jogadores.get(0).getApelido() + " Voce escolheu o personagem " + personagens.get(3).getNomeP());
 					jogadores.get(0).setJogador1P(personagens.get(3));
 					personagens.remove(3);
 					break;
 
 				case 5:
 
-					System.out
-							.print(jogadores.get(0).getApelido() + " Voce escolheu o personagem " + personagens.get(4).getNomeP());
+					System.out.printf(jogadores.get(0).getApelido() + " Voce escolheu o personagem " + personagens.get(4).getNomeP());
 					jogadores.get(0).setJogador1P(personagens.get(4));
 					personagens.remove(4);
 					break;
@@ -209,15 +207,18 @@ public class Menu {
 		} else if (jogadores.size() == 2) {
 
 			// Colocar as descricoes de habilidade
-			System.out.println("------------------------------------------------------------------------");
-			System.out.println("Jogador 1 escolha seu personagem!");
-			System.out.println("------------------------------------------------------------------------");
+			System.out.println("");
+			System.out.println("----------------------------------------------------------------");
+			System.out.println("---------------Jogador 1 escolha seu personagem!----------------");
+			System.out.println("----------------------------------------------------------------");
 
 			// mostrar personagens
 			for (int i = 0; i < personagens.size(); i++) {
-				System.out.print(i + 1 + "-" + personagens.get(i).getNomeP() + "\n");
+				System.out.print(i + 1 + "-" + personagens.get(i).getNomeP() +" " +personagens.get(i).getHabilidadeP() +"\n");
+				System.out.println("----------------------------------------------------------------");
 
 			}
+			System.out.println("----------------------------------------------------------------");
 			System.out.print("Escolha:");
 
 			int opcaoPersonagem = sc3.nextInt();
@@ -225,45 +226,43 @@ public class Menu {
 			// escolha de personagem
 			switch (opcaoPersonagem) {
 				case 1:
-					System.out
-							.print(jogadores.get(0).getApelido() + " Voce escolheu o personagem " + personagens.get(0).getNomeP());
+					System.out.printf(jogadores.get(0).getApelido() + " Voce escolheu o personagem " + personagens.get(0).getNomeP());
 					jogadores.get(0).setJogador1P(personagens.get(0));
 					personagens.remove(0);
 					break;
 				case 2:
-					System.out
-							.print(jogadores.get(0).getApelido() + " Voce escolheu o personagem " + personagens.get(1).getNomeP());
+					System.out.printf(jogadores.get(0).getApelido() + " Voce escolheu o personagem " + personagens.get(1).getNomeP());
 					jogadores.get(0).setJogador1P(personagens.get(1));
 					personagens.remove(1);
 					break;
 
 				case 3:
 
-					System.out
-							.print(jogadores.get(0).getApelido() + " Voce escolheu o personagem " + personagens.get(2).getNomeP());
+					System.out.printf(jogadores.get(0).getApelido() + " Voce escolheu o personagem " + personagens.get(2).getNomeP());
 					jogadores.get(0).setJogador1P(personagens.get(2));
 					personagens.remove(2);
 					break;
 
 				case 4:
 
-					System.out
-							.print(jogadores.get(0).getApelido() + " Voce escolheu o personagem " + personagens.get(3).getNomeP());
+					System.out.printf(jogadores.get(0).getApelido() + " Voce escolheu o personagem " + personagens.get(3).getNomeP());
 					jogadores.get(0).setJogador1P(personagens.get(3));
 					personagens.remove(3);
 					break;
 
 			}
-
-			System.out.println("------------------------------------------------------------------------");
-			System.out.println("Jogador 2 escolha seu personagem!");
-			System.out.println("------------------------------------------------------------------------");
+			System.out.println("");
+			System.out.println("----------------------------------------------------------------");
+			System.out.println("----------------Jogador 2 escolha seu personagem!---------------");
+			System.out.println("----------------------------------------------------------------");
 
 			// mostrar personagens
 			for (int i = 0; i < personagens.size(); i++) {
-				System.out.print(i + 1 + "-" + personagens.get(i).getNomeP() + "\n");
+				System.out.print(i + 1 + "-" + personagens.get(i).getNomeP() + personagens.get(i).getHabilidadeP() +"\n");
+				System.out.println("----------------------------------------------------------------");
 
 			}
+			System.out.print("----------------------------------------------------------------");
 			System.out.print("Escolha:");
 
 			int opcaoPersonagem2 = sc3.nextInt();
@@ -271,30 +270,26 @@ public class Menu {
 			// escolha de personagens
 			switch (opcaoPersonagem2) {
 				case 1:
-					System.out
-							.print(jogadores.get(1).getApelido() + " Voce escolheu o personagem " + personagens.get(0).getNomeP());
+					System.out.printf(jogadores.get(1).getApelido() + " Voce escolheu o personagem " + personagens.get(0).getNomeP());
 					jogadores.get(1).setJogador1P(personagens.get(0));
 					personagens.remove(0);
 					break;
 				case 2:
-					System.out
-							.print(jogadores.get(1).getApelido() + " Voce escolheu o personagem " + personagens.get(1).getNomeP());
+					System.out.printf(jogadores.get(1).getApelido() + " Voce escolheu o personagem " + personagens.get(1).getNomeP());
 					jogadores.get(1).setJogador1P(personagens.get(1));
 					personagens.remove(1);
 					break;
 
 				case 3:
 
-					System.out
-							.print(jogadores.get(1).getApelido() + " Voce escolheu o personagem " + personagens.get(2).getNomeP());
+					System.out.printf(jogadores.get(1).getApelido() + " Voce escolheu o personagem " + personagens.get(2).getNomeP());
 					jogadores.get(1).setJogador1P(personagens.get(2));
 					personagens.remove(2);
 					break;
 
 				case 4:
 
-					System.out
-							.print(jogadores.get(1).getApelido() + " Voce escolheu o personagem " + personagens.get(3).getNomeP());
+					System.out.printf(jogadores.get(1).getApelido() + " Voce escolheu o personagem " + personagens.get(3).getNomeP());
 					jogadores.get(1).setJogador1P(personagens.get(3));
 					personagens.remove(3);
 					break;
@@ -308,23 +303,34 @@ public class Menu {
 
 	}
 
-	public static void sobreOJogo() {
-
-		System.out.println(
-				"O objetivo do jogo e vencer o oponente, que utiliza habilidades tanto quanto vocï¿½, essas habilidades tem o poder de influenciar no decorrer do jogo, tanto quanto a vida quanto as perguntas que serï¿½o apresentadas. Todos os jogadores possuem vida, da qual e diminuida se responder a resposta de forma errada. Essas perguntas e respostas sï¿½o sobre Tecnologia da informaï¿½ï¿½o. O jogo termina quando a vida do oponente chegar a 0.");
-
+	public void sobreOJogo() {
+		
+		System.out.println("----------------------------------------------------------------");
+		System.out.println("O objetivo do jogo e vencer o oponente, que utiliza habilidades tanto quanto voce,");
+		System.out.println("essas habilidades tem o poder de influenciar no decorrer do jogo");
+		System.out.println("tanto quanto a vida quanto as perguntas que serao apresentadas.");
+		System.out.println("Todos os jogadores possuem vida, da qual e diminuida se responder a resposta de forma errada.");
+		System.out.println("Essas perguntas e respostas sao sobre Tecnologia da Informaçao.");
+		System.out.println("O jogo termina quando a vida do oponente chegar a 0.");
+		System.out.println("----------------------------------------------------------------");
+		System.out.println("--------------------Pronto pra Jogar Ask Dev?-------------------");
 	}
 
 	public void sobreDesenvolvedores() {
-
-		System.out
-				.println("Nirlando Oliveira, cursando Analise e Desenvolvimento de sistemas na unidade UNA Cristiano machado");
-		System.out
-				.println("Luan Victor Miranda Santiago, atuamente esta cursando Gestï¿½o em Ti na unidade UNA Cristiano machado");
-		System.out.println(
-				"Guilherme Augusto, atuamente esta cursando Analise e Desenvolvimento de sistemas na unidade UNA Cristiano machado");
+		
+		System.out.println("----------------------------------------------------------------");
+		System.out.println("-----------------O ASK DEV foi desenvolvido por:----------------");
+		System.out.println("----------------------------------------------------------------");
+		System.out.println("Nirlando Oliveira, cursando Analise e Desenvolvimento de sistemas na unidade UNA Cristiano machado");
+		System.out.println("----------------------------------------------------------------");
+		System.out.println("Luan Victor Miranda Santiago, atuamente esta cursando Gestao em Ti na unidade UNA Cristiano machado");
+		System.out.println("----------------------------------------------------------------");
+		System.out.println("Guilherme Augusto, atuamente esta cursando Analise e Desenvolvimento de sistemas na unidade UNA Cristiano machado");
+		System.out.println("----------------------------------------------------------------");
 		System.out.println("Willian");
+		System.out.println("----------------------------------------------------------------");
 		System.out.println("Wellington Richard");
+		System.out.println("----------------------------------------------------------------");
 
 	}
 

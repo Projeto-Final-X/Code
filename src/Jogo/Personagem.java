@@ -52,7 +52,7 @@ package Jogo;
 				}
 
 				public void setHabilidadeP(String habilidadeP) {
-					habilidadeP = habilidadeP;
+					this.habilidadeP = habilidadeP;
 				}
 	
 	

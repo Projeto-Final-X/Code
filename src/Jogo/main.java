@@ -41,6 +41,7 @@ public class main {
 		perso1.setStatusP(false);
 		perso1.setTempoDeVida(100);
 		perso1.setIdP(01);
+		perso1.setHabilidadeP("Thriller - Morde um de seus zumbis e fica super atento a todos os passos do outro jogador");
 
 		Personagem perso2 = new Personagem();
 
@@ -48,27 +49,31 @@ public class main {
 		perso2.setStatusP(false);
 		perso2.setTempoDeVida(100);
 		perso2.setIdP(02);
+		perso2.setHabilidadeP("Donnuts - Hommer se alimenta muito bem e fica mais animado para batalha");
 
 		Personagem perso3 = new Personagem();
 
-		perso3.setNomeP("Luan");
+		perso3.setNomeP("Neymar");
 		perso3.setStatusP(true);
-		perso3.setTempoDeVida(10);
+		perso3.setTempoDeVida(100);
 		perso3.setIdP(03);
+		perso3.setHabilidadeP("Jogador - Seu andado e diferenciado, o que o faz ser muito veloz dentro de jogo");
 
 		Personagem perso4 = new Personagem();
 
-		perso4.setNomeP("gui");
+		perso4.setNomeP("Jogador n1");
 		perso4.setStatusP(true);
-		perso4.setTempoDeVida(1000);
+		perso4.setTempoDeVida(100);
 		perso4.setIdP(04);
+		perso4.setHabilidadeP("Futuro Gamer - Esta habilidade o ajuda em caracteristicas como: Intelecto aumentado, Poder Geek acima de 8000");
 
 		Personagem perso5 = new Personagem();
 
-		perso5.setNomeP("Nirlandao");
+		perso5.setNomeP("Super Homem");
 		perso5.setStatusP(false);
-		perso5.setTempoDeVida(3000);
+		perso5.setTempoDeVida(100);
 		perso5.setIdP(05);
+		perso5.setHabilidadeP("Raio Lazer - Ele enxerga alem do momento muito astuto, cuidado com o seu raio");
 
 		int continua = 1;
 
@@ -102,8 +107,16 @@ public class main {
 					
 					novaPartida.inicioPartida(salvaJogadores, perguntas);
 					
-					
-					
+				case 2:
+					Menu menu2 = new Menu();
+					menu2.sobreDesenvolvedores();
+					break;
+				case 3:
+					Menu menu3 = new Menu();
+					menu3.sobreOJogo();
+					break;
+				case 4:
+					break;
 					
 
 			}
