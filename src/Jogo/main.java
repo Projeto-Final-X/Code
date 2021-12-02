@@ -163,7 +163,7 @@ public class main {
 						salvaJogadores = menu.chamarMenuEscolhaJogador();
 						menu.menuPersonagem(personagens, salvaJogadores);
 						novaPartida.inicioPartida(salvaJogadores, perguntas);
-						System.out.println("1 - JOGAR NOVAMENTE");
+						System.out.println("1 - CRIAR JOGO");
 						System.out.println("2 - VOLTAR AO MENU");
 						respostaFinal = sc.nextInt();
 					} while (respostaFinal == 1);
