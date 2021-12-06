@@ -44,7 +44,7 @@ public class Menu {
 				j1.setApelido(apelidojogador1);
 				j1.setTelefone(telefonejogador1);
 				j1.setEmail(emailjogador1);
-				System.out.println("O jogador1 com o nome de:" + j1.getNome() + " Foi cadastrado com sucesso!");
+				System.out.println("O jogador1 com o nome de:" + j1.getApelido() + " Foi cadastrado com sucesso!");
 				jogadores.add(j1);
 				break;
 			case 2:
@@ -92,6 +92,7 @@ public class Menu {
 				System.out.println("----------------------------------------------------------------");
 				// Scanner proxima linha para nomejogador2
 				System.out.printf("\nJogador 2 coloque seu nome por favor:");
+				nomejogador2 = sc2.nextLine();
 				nomejogador2 = sc2.nextLine();
 				j2.setNome(nomejogador2);
 				System.out.printf("Jogador 2 coloque seu apelido por favor:");
@@ -279,15 +280,15 @@ public class Menu {
 		System.out
 				.println("Nirlando Oliveira, cursando Analise e Desenvolvimento de sistemas na unidade UNA Cristiano machado");
 		System.out.println("----------------------------------------------------------------");
-		System.out
-				.println("Luan Victor Miranda Santiago, atuamente esta cursando Gestao em Ti na unidade UNA Cristiano machado");
-		System.out.println("----------------------------------------------------------------");
 		System.out.println(
-				"Guilherme Augusto, atuamente esta cursando Analise e Desenvolvimento de sistemas na unidade UNA Cristiano machado");
+				"Luan Victor Miranda Santiago, atualmente esta cursando Gestao em Ti na unidade UNA Cristiano machado");
 		System.out.println("----------------------------------------------------------------");
-		System.out.println("Willian");
+		System.out
+				.println("Guilherme Augusto, atualmente esta cursando Ciencia da Computacao na unidade UNA Cristiano machado");
 		System.out.println("----------------------------------------------------------------");
-		System.out.println("Wellington Richard");
+		System.out.println("Willian, atualmente esta cursando Ciencia da Computacao na unidade UNA Cristiano machado");
+		System.out.println("----------------------------------------------------------------");
+		System.out.println("Miguel Veloso, atualmente cursando sistema de informacao");
 		System.out.println("----------------------------------------------------------------");
 	}
 

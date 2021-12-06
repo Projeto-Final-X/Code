@@ -162,6 +162,7 @@ public class main {
 						List<Jogador> salvaJogadores = new ArrayList<Jogador>();
 						salvaJogadores = menu.chamarMenuEscolhaJogador();
 						menu.menuPersonagem(personagens, salvaJogadores);
+
 						novaPartida.inicioPartida(salvaJogadores, perguntas);
 						System.out.println("1 - CRIAR JOGO");
 						System.out.println("2 - VOLTAR AO MENU");

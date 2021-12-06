@@ -1,5 +1,6 @@
 package Jogo;
 
+import java.util.Random;
 import java.util.List;
 import java.util.Scanner;
 
@@ -13,10 +14,10 @@ public class Partida {
 		} else {
 			if (salvaJogadores.get(0).getJogador1P().getTempoDeVida() > salvaJogadores.get(1).getJogador1P()
 					.getTempoDeVida()) {
-				System.out.print("O jogador vencedor �" + salvaJogadores.get(0).getNome());
+				System.out.print("O jogador vencedor" + salvaJogadores.get(0).getNome());
 			} else if (salvaJogadores.get(0).getJogador1P().getTempoDeVida() < salvaJogadores.get(1).getJogador1P()
 					.getTempoDeVida()) {
-				System.out.print("O jogador vencedor �" + salvaJogadores.get(1).getNome());
+				System.out.print("O jogador vencedor" + salvaJogadores.get(1).getNome());
 			} else {
 				System.out.print("O jogo empatou");
 			}
@@ -79,7 +80,20 @@ public class Partida {
 			for (int a = 0; a < salvaJogadores.size(); a++) {
 				if (salvaJogadores.size() == 2) {
 					boolean vezJogador1 = true;
-					boolean vezJogador2 = false;
+					boolean vezJogador2 = true;
+
+					Random random = new Random();
+					int intervalo_randomico = random.nextInt(1);
+					if (intervalo_randomico == 0) {
+						vezJogador1 = true;
+						vezJogador2 = false;
+						System.out.println("O jogador 1 foi sorteado");
+					} else if (intervalo_randomico == 1) {
+						vezJogador2 = true;
+						vezJogador1 = false;
+						System.out.println("O jogador 2 foi sorteado");
+					}
+					System.out.println("O jogador sorteado foi" + intervalo_randomico);
 
 					while (vezJogador1 == true) {
 						System.out.println("------------------------------------------------------");
@@ -149,12 +163,12 @@ public class Partida {
 							case 1:
 								if (respostaJogador2 == perguntas.get(i).getAlternativaCorreta()) {
 									System.out.println("Voce acertou!!!");
-									vezJogador1 = true;
+									vezJogador2 = true;
 									i++;
 								} else if (respostaJogador2 != perguntas.get(i).getAlternativaCorreta()) {
 									System.out.println("Voce errou!!!");
-									vezJogador1 = false;
-									vezJogador2 = true;
+									vezJogador1 = true;
+									vezJogador2 = false;
 									// DEFINE O TEMPO DE VIDA DO JOGADOR 1 PARA 100 E DEPOIS DIMINUI EM 10 PELO
 									// ERRO.
 									salvaJogadores.get(0).getJogador1P()
@@ -173,7 +187,6 @@ public class Partida {
 					}
 					fimPartida(salvaJogadores);
 				}
-				System.out.println("SAI DO ELSE");
 			}
 		}
 
