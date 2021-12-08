@@ -38,12 +38,15 @@ public class Partida {
 				System.out.println("------------------------------------------------------");
 				System.out.println(perguntas.get(i).getEnunciadoP());
 				System.out.println("------------------------------------------------------");
-				System.out.println(perguntas.get(i).getAlternativaA());
-				System.out.println(perguntas.get(i).getAlternativaB());
-				System.out.println(perguntas.get(i).getAlternativaC());
-				System.out.println(perguntas.get(i).getAlternativaD());
-				// Pega a String e a primeira posi��o
-				char respostaJogador1 = sc.next().charAt(0);
+				char respostaJogador1;
+				do {
+					System.out.println(perguntas.get(i).getAlternativaA());
+					System.out.println(perguntas.get(i).getAlternativaB());
+					System.out.println(perguntas.get(i).getAlternativaC());
+					System.out.println(perguntas.get(i).getAlternativaD());
+					// Pega a String e a primeira posi��o
+					respostaJogador1 = sc.next().charAt(0);
+				}while(respostaJogador1 != 'A' && respostaJogador1 != 'B' && respostaJogador1 != 'C' && respostaJogador1 != 'D' && respostaJogador1 != 'a' && respostaJogador1 != 'b' && respostaJogador1 != 'c' && respostaJogador1 != 'd');
 				int confirmacaoJogador;
 				do {
 					System.out.println("Voce tem certeza da respota?");
@@ -101,12 +104,15 @@ public class Partida {
 						System.out.println("------------------------------------------------------");
 						System.out.println(perguntas.get(i).getEnunciadoP());
 						System.out.println("------------------------------------------------------");
-						System.out.println(perguntas.get(i).getAlternativaA());
-						System.out.println(perguntas.get(i).getAlternativaB());
-						System.out.println(perguntas.get(i).getAlternativaC());
-						System.out.println(perguntas.get(i).getAlternativaD());
-						// Pega a String e a primeira posi��o
-						char respostaJogador1 = sc.next().charAt(0);
+						char respostaJogador1;
+						do {
+							System.out.println(perguntas.get(i).getAlternativaA());
+							System.out.println(perguntas.get(i).getAlternativaB());
+							System.out.println(perguntas.get(i).getAlternativaC());
+							System.out.println(perguntas.get(i).getAlternativaD());
+							// Pega a String e a primeira posi��o
+							respostaJogador1 = sc.next().charAt(0);
+						}while(respostaJogador1 != 'A' && respostaJogador1 != 'B' && respostaJogador1 != 'C' && respostaJogador1 != 'D' && respostaJogador1 != 'a' && respostaJogador1 != 'b' && respostaJogador1 != 'c' && respostaJogador1 != 'd');
 						int confirmacaoJogador;
 						do {
 							System.out.println("Voce tem certeza da respota?");
@@ -142,16 +148,19 @@ public class Partida {
 					}
 					// While do jogador2
 					while (vezJogador2 == true) {
+						char respostaJogador2;
 						System.out.println(" JOGADOR 2 E SUA VEZ DE JOGAR!");
 						System.out.println("------------------------------------------------------");
 						System.out.println(perguntas.get(i).getEnunciadoP());
 						System.out.println("------------------------------------------------------");
-						System.out.println(perguntas.get(i).getAlternativaA());
-						System.out.println(perguntas.get(i).getAlternativaB());
-						System.out.println(perguntas.get(i).getAlternativaC());
-						System.out.println(perguntas.get(i).getAlternativaD());
-						// Pega a String e a primeira posi��o
-						char respostaJogador2 = sc.next().charAt(0);
+							do {
+							System.out.println(perguntas.get(i).getAlternativaA());
+							System.out.println(perguntas.get(i).getAlternativaB());
+							System.out.println(perguntas.get(i).getAlternativaC());
+							System.out.println(perguntas.get(i).getAlternativaD());
+							// Pega a String e a primeira posi��o
+							respostaJogador2 = sc.next().charAt(0);
+							}while(respostaJogador2 != 'A' && respostaJogador2 != 'B' && respostaJogador2 != 'C' && respostaJogador2 != 'D' && respostaJogador2 != 'a' && respostaJogador2 != 'b' && respostaJogador2 != 'c' && respostaJogador2 != 'd');
 						int confirmacaoJogador;
 						do {
 							System.out.println("Voce tem certeza da respota?");

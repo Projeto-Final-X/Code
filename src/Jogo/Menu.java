@@ -93,7 +93,6 @@ public class Menu {
 				// Scanner proxima linha para nomejogador2
 				System.out.printf("\nJogador 2 coloque seu nome por favor:");
 				nomejogador2 = sc2.nextLine();
-				nomejogador2 = sc2.nextLine();
 				j2.setNome(nomejogador2);
 				System.out.printf("Jogador 2 coloque seu apelido por favor:");
 				apelidojogador2 = sc2.nextLine();
@@ -138,10 +137,8 @@ public class Menu {
 				System.out.print("Erro voce precisa escolher um numero valido para prosseguir!");
 				System.out.printf("Escolha:");
 				int opcaoPersonagemE = sc3.nextInt();
-				opcaoPersonagem = opcaoPersonagemE;
-					
+				opcaoPersonagem = opcaoPersonagemE;	
 			}
-			
 			// escolher personagem
 			switch (opcaoPersonagem) {
 				case 1:
@@ -190,13 +187,12 @@ public class Menu {
 			int opcaoPersonagem;
 			System.out.print("Escolha o numero do personagem que voce deseja escolher!: ");
 				opcaoPersonagem = sc3.nextInt();
-				while(opcaoPersonagem <1 || opcaoPersonagem >=6 ){
-					System.out.print("Erro voce precisa escolher um numero valido para prosseguir!");
-					System.out.printf("Escolha:");
-					int opcaoPersonagemE = sc3.nextInt();
-					opcaoPersonagem = opcaoPersonagemE;
-						
-				}
+					while(opcaoPersonagem <1 || opcaoPersonagem >=6){
+						System.out.print("Erro voce precisa escolher um numero valido para prosseguir!");
+						System.out.printf("Escolha:");
+						int opcaoPersonagemE = sc3.nextInt();
+						opcaoPersonagem = opcaoPersonagemE;		
+					}
 						// escolha de personagem
 						switch (opcaoPersonagem) {
 							case 1:
