@@ -93,7 +93,7 @@ public class Partida {
 						vezJogador1 = false;
 						System.out.println("O jogador 2 foi sorteado");
 					}
-					System.out.println("O jogador sorteado foi" + intervalo_randomico);
+					System.out.println("O jogador sorteado ira começar respondendo a primeira pergunta da partida!");
 
 					while (vezJogador1 == true) {
 						System.out.println("------------------------------------------------------");

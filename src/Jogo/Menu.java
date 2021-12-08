@@ -118,6 +118,7 @@ public class Menu {
 
 	public void menuPersonagem(List<Personagem> personagens, List<Jogador> jogadores) {
 		Scanner sc3 = new Scanner(System.in);
+		Scanner sc4 = new Scanner(System.in);
 		// decisao de quantidade de jogadores
 		if (jogadores.size() == 1) {
 			// Colocar as descricoes de habilidade
@@ -133,6 +134,14 @@ public class Menu {
 			System.out.println("----------------------------------------------------------------");
 			System.out.print("Escolha:");
 			int opcaoPersonagem = sc3.nextInt();
+			while(opcaoPersonagem <1 || opcaoPersonagem >=6 ){
+				System.out.print("Erro voce precisa escolher um numero valido para prosseguir!");
+				System.out.printf("Escolha:");
+				int opcaoPersonagemE = sc3.nextInt();
+				opcaoPersonagem = opcaoPersonagemE;
+					
+			}
+			
 			// escolher personagem
 			switch (opcaoPersonagem) {
 				case 1:
@@ -178,42 +187,49 @@ public class Menu {
 						i + 1 + "-" + personagens.get(i).getNomeP() + " Habilidade: " + personagens.get(i).getHabilidadeP() + "\n");
 				System.out.println("----------------------------------------------------------------");
 			}
-			System.out.println("----------------------------------------------------------------");
-			System.out.print("Escolha:");
-			int opcaoPersonagem = sc3.nextInt();
-			// escolha de personagem
-			switch (opcaoPersonagem) {
-				case 1:
-					System.out
-							.println(jogadores.get(0).getApelido() + " Voce escolheu o personagem " + personagens.get(0).getNomeP());
-					jogadores.get(0).setJogador1P(personagens.get(0));
-					personagens.remove(0);
-					break;
-				case 2:
-					System.out
-							.println(jogadores.get(0).getApelido() + " Voce escolheu o personagem " + personagens.get(1).getNomeP());
-					jogadores.get(0).setJogador1P(personagens.get(1));
-					personagens.remove(1);
-					break;
-				case 3:
-					System.out
-							.printf(jogadores.get(0).getApelido() + " Voce escolheu o personagem " + personagens.get(2).getNomeP());
-					jogadores.get(0).setJogador1P(personagens.get(2));
-					personagens.remove(2);
-					break;
-				case 4:
-					System.out
-							.println(jogadores.get(0).getApelido() + " Voce escolheu o personagem " + personagens.get(3).getNomeP());
-					jogadores.get(0).setJogador1P(personagens.get(3));
-					personagens.remove(3);
-					break;
-				case 5:
-					System.out
-							.println(jogadores.get(0).getApelido() + " Voce escolheu o personagem " + personagens.get(4).getNomeP());
-					jogadores.get(0).setJogador1P(personagens.get(4));
-					personagens.remove(4);
-					break;
-			}
+			int opcaoPersonagem;
+			System.out.print("Escolha o numero do personagem que voce deseja escolher!: ");
+				opcaoPersonagem = sc3.nextInt();
+				while(opcaoPersonagem <1 || opcaoPersonagem >=6 ){
+					System.out.print("Erro voce precisa escolher um numero valido para prosseguir!");
+					System.out.printf("Escolha:");
+					int opcaoPersonagemE = sc3.nextInt();
+					opcaoPersonagem = opcaoPersonagemE;
+						
+				}
+						// escolha de personagem
+						switch (opcaoPersonagem) {
+							case 1:
+								System.out
+										.println(jogadores.get(0).getApelido() + " Voce escolheu o personagem " + personagens.get(0).getNomeP());
+								jogadores.get(0).setJogador1P(personagens.get(0));
+								personagens.remove(0);
+								break;
+							case 2:
+								System.out
+										.println(jogadores.get(0).getApelido() + " Voce escolheu o personagem " + personagens.get(1).getNomeP());
+								jogadores.get(0).setJogador1P(personagens.get(1));
+								personagens.remove(1);
+								break;
+							case 3:
+								System.out
+										.printf(jogadores.get(0).getApelido() + " Voce escolheu o personagem " + personagens.get(2).getNomeP());
+								jogadores.get(0).setJogador1P(personagens.get(2));
+								personagens.remove(2);
+								break;
+							case 4:
+								System.out
+										.println(jogadores.get(0).getApelido() + " Voce escolheu o personagem " + personagens.get(3).getNomeP());
+								jogadores.get(0).setJogador1P(personagens.get(3));
+								personagens.remove(3);
+								break;
+							case 5:
+								System.out
+										.println(jogadores.get(0).getApelido() + " Voce escolheu o personagem " + personagens.get(4).getNomeP());
+								jogadores.get(0).setJogador1P(personagens.get(4));
+								personagens.remove(4);
+								break;
+							}
 			System.out.println("");
 			System.out.println("----------------------------------------------------------------");
 			System.out.println("----------------Jogador 2 escolha seu personagem!---------------");
@@ -224,36 +240,41 @@ public class Menu {
 						i + 1 + "-" + personagens.get(i).getNomeP() + " Habilidade: " + personagens.get(i).getHabilidadeP() + "\n");
 				System.out.println("----------------------------------------------------------------");
 			}
-			System.out.println("----------------------------------------------------------------");
-			System.out.print("Escolha:");
+			System.out.print("Escolha o numero do personagem que voce deseja escolher!: ");
 			int opcaoPersonagem2 = sc3.nextInt();
-			// escolha de personagens
-			switch (opcaoPersonagem2) {
-				case 1:
-					System.out
-							.println(jogadores.get(1).getApelido() + " Voce escolheu o personagem " + personagens.get(0).getNomeP());
-					jogadores.get(1).setJogador1P(personagens.get(0));
-					personagens.remove(0);
-					break;
-				case 2:
-					System.out
-							.println(jogadores.get(1).getApelido() + " Voce escolheu o personagem " + personagens.get(1).getNomeP());
-					jogadores.get(1).setJogador1P(personagens.get(1));
-					personagens.remove(1);
-					break;
-				case 3:
-					System.out
-							.println(jogadores.get(1).getApelido() + " Voce escolheu o personagem " + personagens.get(2).getNomeP());
-					jogadores.get(1).setJogador1P(personagens.get(2));
-					personagens.remove(2);
-					break;
-				case 4:
-					System.out
-							.println(jogadores.get(1).getApelido() + " Voce escolheu o personagem " + personagens.get(3).getNomeP());
-					jogadores.get(1).setJogador1P(personagens.get(3));
-					personagens.remove(3);
-					break;
-			}
+				while(opcaoPersonagem2 <1 || opcaoPersonagem2 >=5){
+					System.out.print("Erro voce precisa escolher um numero valido para prosseguir!");
+					System.out.printf("Escolha: ");
+					int opcaoPersonagemE2 = sc3.nextInt();
+					opcaoPersonagem2 = opcaoPersonagemE2;
+				}
+					// escolha de personagens
+					switch (opcaoPersonagem2) {
+						case 1:
+							System.out
+									.println(jogadores.get(1).getApelido() + " Voce escolheu o personagem " + personagens.get(0).getNomeP());
+							jogadores.get(1).setJogador1P(personagens.get(0));
+							personagens.remove(0);
+							break;
+						case 2:
+							System.out
+									.println(jogadores.get(1).getApelido() + " Voce escolheu o personagem " + personagens.get(1).getNomeP());
+							jogadores.get(1).setJogador1P(personagens.get(1));
+							personagens.remove(1);
+							break;
+						case 3:
+							System.out
+									.println(jogadores.get(1).getApelido() + " Voce escolheu o personagem " + personagens.get(2).getNomeP());
+							jogadores.get(1).setJogador1P(personagens.get(2));
+							personagens.remove(2);
+							break;
+						case 4:
+							System.out
+									.println(jogadores.get(1).getApelido() + " Voce escolheu o personagem " + personagens.get(3).getNomeP());
+							jogadores.get(1).setJogador1P(personagens.get(3));
+							personagens.remove(3);
+							break;
+					}
 		}
 	}
 
