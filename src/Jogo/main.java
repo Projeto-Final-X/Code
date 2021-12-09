@@ -66,7 +66,7 @@ public class main {
 		perg7.setAlternativaCorreta('c');
 
 		Pergunta perg8 = new Pergunta();
-		perg8.setEnunciadoP("Qual e o diagrama que visa identificar os atores que utilizarão o software?");
+		perg8.setEnunciadoP("Qual e o diagrama que visa identificar os atores que utilizarao o software?");
 		perg8.setAlternativaA("A - Diagrama de sequencia");
 		perg8.setAlternativaB("B - Diagrama de casos de uso");
 		perg8.setAlternativaC("C - Diagrama de objetos");
